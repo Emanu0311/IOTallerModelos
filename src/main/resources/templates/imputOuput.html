@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrada / Salida Web</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            color: #34495e;
+            font-weight: 600;
+        }
+        input[type="text"] {
+            padding: 12px;
+            border: 1px solid #ccd1d9;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+        button {
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .response {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f4f8;
+            border-left: 5px solid #3498db;
+            border-radius: 4px;
+            color: #2c3e50;
+        }
+        .response strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #2980b9;
+        }
+        .response p {
+            margin: 0;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Entrada / Salida - Web</h2>
+    <form action="#" th:action="@{/imputOuput}" th:object="${message}" method="post">
+        <label for="content">Ingrese un mensaje:</label>
+        <input type="text" id="content" th:field="*{content}" placeholder="Escribe algo aquí..." required autofocus />
+        <button type="submit">Enviar al Controlador</button>
+    </form>
+
+    <div class="response" th:if="${message.response != null}">
+        <strong>Respuesta del Servidor (Output):</strong>
+        <p th:text="${message.response}"></p>
+    </div>
+</div>
+
+</body>
+</html>
