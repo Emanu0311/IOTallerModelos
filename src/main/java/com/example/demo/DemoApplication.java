@@ -6,11 +6,7 @@ import com.example.demo.factory.Output;
 import com.example.demo.factory.console.ConsoleIOFactory;
 import com.example.demo.factory.frame.FrameIOFactory;
 import com.example.demo.factory.web.WebIOFactory;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import java.util.Scanner;
 
 @SpringBootApplication
@@ -37,9 +33,11 @@ public class DemoApplication {
 			case 3:
 				System.out.println("Iniciando aplicación web...");
 				System.out.println("Por favor abra su navegador web en http://localhost:3000/imputOuput");
-				SpringApplication.run(DemoApplication.class, args);
+				WebIOFactory webFactory = new WebIOFactory();
+				webFactory.startSpringApplication(args);
 				System.out.println("Servidor iniciado. Presione Ctrl+C para detenerlo.");
 				// Skip the rest for web context
+				scanner.close();
 				return;
 			default:
 				System.out.println("Opción no válida.");
