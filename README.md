@@ -7,4 +7,5 @@
 - El cliente decide qué entrada y salida desea.
 - ## Añadir los adaptadores correspondientes para recibir cualquier tipo de dato y convertirlo al requerido por los métodos de las entradas y salidas creadas. (Probar con otro tipo de dato diferente)
 <img width="1300" height="600" alt="DiagramaUML_EntradaSalida" src="https://github.com/user-attachments/assets/8667c5ea-5bf4-4d13-a680-986547088bee" />
-<img width="2165" height="493" alt="UML_Detallado" src="https://github.com/user-attachments/assets/e9371ee4-ecae-4b83-bec4-5330ce16ee85" />
+
+<img width="2979" height="650" alt="UML_Final_Completo" src="https://github.com/user-attachments/assets/bd867ec8-309c-4302-9a61-6cef89c4780b" />
