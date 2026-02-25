@@ -6,3 +6,4 @@
 - La entrada tiene un método de ingresar datos, y la salida uno de salida de datos. 
 - El cliente decide qué entrada y salida desea.
 - ## Añadir los adaptadores correspondientes para recibir cualquier tipo de dato y convertirlo al requerido por los métodos de las entradas y salidas creadas. (Probar con otro tipo de dato diferente)
+<img width="1389" height="428" alt="UML_Abstract_Factory" src="https://github.com/user-attachments/assets/a0c5296c-80b0-4102-89a3-49f1ca9b40bf" />
